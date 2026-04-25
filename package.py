@@ -102,7 +102,7 @@ def add_dir(tar, out, mod=None):
     cache = getattr(tar, '__cache__', set())
     tar.__cache__ = cache
 
-    if out.parent == Path('.') or out in cache:
+    if out == out.parent or out in cache:
         return
 
     add_dir(tar, out.parent)
