@@ -35,4 +35,4 @@ jobs:
         name: ${{ steps.parse_toml.outputs.TITLE }}
         files: '**/*.deb'
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
